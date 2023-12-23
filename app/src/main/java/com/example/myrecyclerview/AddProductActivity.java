@@ -1,4 +1,6 @@
 package com.example.myrecyclerview;
+import static java.lang.Double.parseDouble;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -23,6 +25,7 @@ public class AddProductActivity extends AppCompatActivity {
 
     private EditText productNameEditText;
     private EditText productPriceEditText;
+    private EditText productPromoEditText;
     private ImageView productImageView;
     private Uri selectedImageUri;
 
@@ -34,6 +37,7 @@ public class AddProductActivity extends AppCompatActivity {
 
         productNameEditText = findViewById(R.id.editTextProductName);
         productPriceEditText = findViewById(R.id.editTextProductPrice);
+        productPromoEditText = findViewById(R.id.editTextProductPromo);
         productImageView = findViewById(R.id.imageViewProduct);
 
         Button selectImageButton = findViewById(R.id.buttonSelectImage);
@@ -57,8 +61,9 @@ public class AddProductActivity extends AppCompatActivity {
     private void uploadProductToFirebase() {
         String productName = productNameEditText.getText().toString().trim();
         String productPrice = productPriceEditText.getText().toString().trim();
+        String productPromo = productPromoEditText.getText().toString().trim();
 
-        if (!productName.isEmpty() &&!productPrice.isEmpty() && selectedImageUri != null) {
+        if (!productName.isEmpty() &&!productPrice.isEmpty()&&!productPromo.isEmpty() && selectedImageUri != null) {
 
 
             FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -68,8 +73,8 @@ public class AddProductActivity extends AppCompatActivity {
             uploadTask.addOnSuccessListener(taskSnapshot -> {
                 storageRef.getDownloadUrl().addOnSuccessListener(uri -> {
                     String imageUrl = uri.toString();
-                    String productId="product_5";
-                    Product product = new Product(productId,productName,Double. valueOf(productPrice) ,imageUrl);
+                    String productId=database.getReference("products").push().getKey();
+                    Product product = new Product(productId,productName, parseDouble(productPrice), Integer.parseInt(productPromo) ,imageUrl);
 
                     // Assuming you have a "products" node in your database
                     //database.getReference("products").push().setValue(product);

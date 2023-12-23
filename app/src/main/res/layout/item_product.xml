@@ -8,19 +8,25 @@
     android:orientation="horizontal">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="235dp"
-        android:layout_height="237dp"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:padding="5dp"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true">
-
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/edit_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:contentDescription="@string/edit"
+            android:src="@drawable/edit"
+            app:fabCustomSize="40dp"
+            app:maxImageSize="20dp" />
         <LinearLayout
             android:layout_width="218dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical">
@@ -28,26 +34,81 @@
             <ImageView
                 android:id="@+id/imageViewProduct"
                 android:layout_width="160dp"
-                android:layout_height="100dp"
+                android:layout_height="235dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/tv" />
+                android:src="@drawable/produit2"
+                android:contentDescription="@string/product" />
 
             <TextView
                 android:id="@+id/textViewProductName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="name"
-                android:textSize="25dp"
+                android:text="@string/product_name"
+                android:textSize="11sp"
                 android:textStyle="bold" />
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textViewProductPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="price"
-                android:textColor="#7F50"
-                android:textSize="20dp" />
+                android:foreground="@drawable/strikethrough"
+                android:text="@string/product_price"
+                android:textColor="@color/red"
+                android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/textViewdt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/strikethrough"
+                    android:text="DT"
+                    android:paddingStart="2dp"
+                    android:textColor="@color/red"
+                    android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/textViewProductPromo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:text="@string/price_promos"
+                    android:textColor="@color/red"
+                    android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/textViewoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="3dp"
+                    android:text="%OFF"
+                    android:textColor="@color/red"
+                    android:textSize="11sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style = "?android:attr/ratingBarStyleSmall"
+                    android:max="5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nb_ratings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="5dp"
+                    android:text="@string/nb_ratings" />
+            </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

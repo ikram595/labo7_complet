@@ -35,7 +35,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         // Bind data to views
         holder.productName.setText(product.getName());
-        holder.productPrice.setText(String.valueOf(product.getPrice()));
+        holder.productPrice.setText(String.valueOf(product.getPrice_original()));
+        holder.productPromos.setText(String.valueOf(product.getPromos()));
 
         // Use Glide to load the image from the URL
         Glide.with(context)
@@ -52,12 +53,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         ImageView productImage;
         TextView productName;
         TextView productPrice;
+        TextView productPromos;
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
             productImage = itemView.findViewById(R.id.imageViewProduct);
             productName = itemView.findViewById(R.id.textViewProductName);
             productPrice = itemView.findViewById(R.id.textViewProductPrice);
+            productPromos=itemView.findViewById(R.id.textViewProductPromo);
         }
     }
 }

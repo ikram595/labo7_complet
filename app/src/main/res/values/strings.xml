@@ -48,4 +48,11 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="title_activity_auth">AuthActivity</string>
+    <string name="edit">edit</string>
+    <string name="product">product</string>
+    <string name="percent">%</string>
+    <string name="price_promos">price promos</string>
+    <string name="nb_ratings">(20)</string>
+    <string name="product_name">name</string>
+    <string name="product_price">price</string>
 </resources>

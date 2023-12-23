@@ -29,6 +29,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProduct" />
 
+
+    <EditText
+        android:id="@+id/editTextProductPromo"
+        android:layout_width="256dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Product Promo"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddProduct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProductPrice"
+        app:layout_constraintVertical_bias="0.23" />
+
     <Button
         android:id="@+id/buttonSelectImage"
         android:layout_width="wrap_content"
@@ -52,10 +67,10 @@
         android:id="@+id/buttonAddProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="104dp"
         android:text="Add Product"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextProductPrice" />
 
@@ -84,6 +99,18 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewProduct"
         app:layout_constraintVertical_bias="0.81" />
 
+    <TextView
+        android:id="@+id/productPromoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="New Product's Promo"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProductPrice" />
+
     <Button
         android:id="@+id/cancelBtn"
         android:layout_width="126dp"
@@ -107,5 +134,17 @@
         app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toEndOf="@+id/editTextProductPrice"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProduct" />
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="26dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/percent"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toEndOf="@+id/editTextProductPromo"
+        app:layout_constraintTop_toBottomOf="@+id/DT" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
