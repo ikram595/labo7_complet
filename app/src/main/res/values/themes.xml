@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.MyRecyclerView" parent="Base.Theme.MyRecyclerView" />
+    <style name="Theme.TuniAds.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.TuniAds.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>
