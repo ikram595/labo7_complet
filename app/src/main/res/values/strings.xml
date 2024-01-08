@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyRecyclerView</string>
+    <string name="app_name">TuniAds</string>
     <string name="addBtn">Add Product</string>
     <string name="loginBtn">Login</string>
     <string name="cancelBtn">Cancel</string>
@@ -10,9 +10,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="vos_annonce">
-Vos annonces
-</string>
+    <string name="vos_annonce">Vos annonces</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
@@ -57,4 +55,17 @@ Vos annonces
     <string name="nb_ratings">(20)</string>
     <string name="product_name">name</string>
     <string name="product_price">price</string>
+    <string name="e_mail">E-mail</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="cr_er_un_compte">Créer un compte</string>
+    <string name="connexion">Connexion</string>
+    <string name="bienvenue_sur">Bienvenue Sur</string>
+    <string name="newproduct_name">Product Name</string>
+    <string name="newproduct_price">Prix en DT</string>
+    <string name="pourcentage_promotion">Pourcentage Promotion</string>
+    <string name="nom_d_utilisateur">Nom d\'utilisateur: N/A</string>
+    <string name="email">Email: N/A</string>
+    <string name="votre_compte">Votre compte</string>
+    <string name="valuer">évaluer</string>
+    <string name="like_button">like_button</string>
 </resources>

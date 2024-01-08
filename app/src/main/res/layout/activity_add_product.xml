@@ -7,42 +7,49 @@
     android:layout_height="match_parent"
     tools:context=".AddProductActivity">
 
+
     <EditText
         android:id="@+id/editTextProductName"
-        android:layout_width="335dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="76dp"
-        android:hint="Product Name"
+        android:layout_width="297.09dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/textedit_style"
+        android:elevation="4dp"
+        android:hint="@string/newproduct_name"
+        android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextProductPrice"
-        android:layout_width="256dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="56dp"
-        android:hint="Product Price"
+        android:layout_width="297.09dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/textedit_style"
+        android:elevation="4dp"
+        android:hint="@string/newproduct_price"
         android:inputType="number"
+        android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProduct" />
 
-
     <EditText
         android:id="@+id/editTextProductPromo"
-        android:layout_width="256dp"
-        android:layout_height="40dp"
+        android:layout_width="297.09dp"
+        android:layout_height="46dp"
         android:layout_marginTop="24dp"
-        android:hint="Product Promo"
+        android:background="@drawable/textedit_style"
+        android:elevation="4dp"
+        android:hint="@string/pourcentage_promotion"
         android:inputType="number"
+        android:paddingStart="16dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonAddProduct"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.232"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextProductPrice"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintVertical_bias="0.352" />
 
     <Button
         android:id="@+id/buttonSelectImage"
@@ -93,9 +100,7 @@
         android:text="New Product's Price"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextProductPrice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/title"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProduct"
         app:layout_constraintVertical_bias="0.81" />
 
@@ -106,45 +111,19 @@
         android:layout_marginTop="8dp"
         android:text="New Product's Promo"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/productPriceTxt"
         app:layout_constraintTop_toBottomOf="@+id/editTextProductPrice" />
 
     <Button
         android:id="@+id/cancelBtn"
         android:layout_width="126dp"
         android:layout_height="47dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
+        android:onClick="cancelBtn"
         android:text="@string/cancelBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAddProduct"
-        android:onClick="cancelBtn"
-        />
-
-    <TextView
-        android:id="@+id/DT"
-        android:layout_width="26dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/DTtxt"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
-        app:layout_constraintStart_toEndOf="@+id/editTextProductPrice"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewProduct" />
-
-    <TextView
-        android:id="@+id/percent"
-        android:layout_width="26dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="44dp"
-        android:text="@string/percent"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.279"
-        app:layout_constraintStart_toEndOf="@+id/editTextProductPromo"
-        app:layout_constraintTop_toBottomOf="@+id/DT" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddProduct" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

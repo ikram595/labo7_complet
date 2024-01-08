@@ -6,6 +6,8 @@ public class Product {
     private double price_original;
     private double promos;
     private String imageUrl;
+    private float averageRating;
+    private int nbRatings;
     // Constructeurs,
 
     public Product(String productId, String name,double price_original, double promos,String imageUrl) {
@@ -47,5 +49,20 @@ public class Product {
     }
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+    public float getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(float averageRating) {
+        this.averageRating = averageRating;
+    }
+
+    public int getNbRatings() {
+        return nbRatings;
+    }
+
+    public void setNbRatings(int nbRatings) {
+        this.nbRatings = nbRatings;
     }
 }

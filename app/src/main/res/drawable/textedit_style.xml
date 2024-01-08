@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <!--  Shadow  -->
+    <item>
+        <shape>
+            <solid android:color="#40000000"/>
+            <!--  Semi-transparent shadow color  -->
+            <corners android:radius="40dp"/>
+            <!--  Same radius as the EditText  -->
+        </shape>
+    </item>
+    <!--  Background  -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF"/>
+            <!--  Background color  -->
+            <corners android:radius="40dp"/>
+            <!--  Same radius as the EditText  -->
+        </shape>
+    </item>
+    <!--  Border  -->
+    <item>
+        <shape>
+            <corners android:radius="40dp"/>
+            <!--  Same radius as the EditText  -->
+            <stroke android:color="#000000" android:width="2dp"/>
+            <!--  Border color and width  -->
+        </shape>
+    </item>
+</layer-list>

@@ -11,38 +11,59 @@
     android:gravity="center"
     tools:context=".AuthActivity">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circularImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/profile_img" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_gravity="left"
+        android:text="@string/bienvenue_sur"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/tuniads" />
+
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="297.09dp"
+        android:layout_height="46dp"
         android:layout_marginTop="16dp"
-        android:hint="E-mail"
+        android:paddingStart="16dp"
+        android:background="@drawable/textedit_style"
+        android:elevation="4dp"
+        android:hint="@string/e_mail"
         android:inputType="textEmailAddress" />
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextEmail"
-        android:layout_marginTop="8dp"
-        android:hint="Mot de passe"
+        android:layout_width="297.09dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:background="@drawable/textedit_style"
+        android:elevation="4dp"
+        android:hint="@string/mot_de_passe"
         android:inputType="textPassword" />
+
     <Button
         android:id="@+id/loginButton"
+        style="@style/RedRoundedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextPassword"
-        android:layout_marginTop="16dp"
-        android:text="Connexion" />
+        android:layout_marginTop="40dp"
+        android:text="@string/connexion" />
+
     <Button
         android:id="@+id/createAccountButton"
+        style="@style/RedRoundedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/loginButton"
-        android:layout_marginTop="8dp"
-        android:text="Créer un compte" />
+        android:layout_marginTop="16dp"
+        android:text="@string/cr_er_un_compte" />
 </LinearLayout>

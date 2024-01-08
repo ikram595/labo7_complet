@@ -15,15 +15,7 @@
         app:cardElevation="4dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true">
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/edit_fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:contentDescription="@string/edit"
-            android:src="@drawable/edit"
-            app:fabCustomSize="40dp"
-            app:maxImageSize="20dp" />
+
         <LinearLayout
             android:layout_width="218dp"
             android:layout_height="wrap_content"
@@ -97,6 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     style = "?android:attr/ratingBarStyleSmall"
+                    android:progressTint="#FFCC01"
                     android:max="5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
